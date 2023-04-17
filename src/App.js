@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Content from "./component/Content";
 
 function App() {
+  const [mount, setMount] = useState(false);
+  // Khi chưa bấm Click me thì count Content chưa được gọi là mount hay unmount 
+  // Nó chỉ là một conponent chưa được hiển thị ra màn hình
+  // mount là được hiển thị ra màn hình(Hay còn gọi là được thêm vào DOM)
+  // unmount là không được hiển thị ra màn hình (Hay còn gọi là được loại bỏ ra khỏi DOM)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <button onClick={() => { setMount(!mount) }}>Click me</button>
+      {mount && <Content />}
+    </div >
   );
 }
 

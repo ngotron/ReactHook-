@@ -1,0 +1,17 @@
+- Hook chỉ là một cái hàm mà trong đó có các function được viết sẵn
+cung cấp bởi thư viện react js, mỗi hàm có một tính năng mỗi trường hợp cụ thể có thể sử dụng
+- khi có cái tính năng phù hợp nào được sử dụng thì lấy ra gọi trong hàm để sử dụng vì vậy mới gọi là hook
+
+1. Hook chỉ dùng cho function component 
+2. Component đơn giản và trở nên dễ hiểu
+  - Không bị chia logic ra như medthods trong lifecycle của class component 
+  - Không cần sử dụng this
+3. Sử dụng hook khi nào?
+  - Dự án mơi => Hooks 
+  - Dự án cũ 
+    + Component mới => Function component + hook 
+    + Component cũ => Giữ nguyên có thời gian tối ưu sau
+  - Logic nghiệp vụ cần sử dụng các tính chất của OOP => class component 
+4. Người mới nên bắt đầu class hay function component 
+5. Có thể kết hợp class component và function component ko?
+  - Được
